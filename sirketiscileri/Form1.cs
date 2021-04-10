@@ -61,7 +61,7 @@ namespace sirketiscileri
             
         }
         }
-
+        //dubul
         private void Form1_Load(object sender, EventArgs e)
         {
             employee.Add(new Employees("musa", "zutov", 456788, "manager","musa","1"));
