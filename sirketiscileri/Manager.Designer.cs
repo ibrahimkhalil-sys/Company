@@ -240,6 +240,7 @@ namespace sirketiscileri
             this.Controls.Add(this.groupBox_empprocess);
             this.Name = "Manager";
             this.Text = "manager";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Manager_FormClosed);
             this.Load += new System.EventHandler(this.Manager_Load);
             this.groupBox_empprocess.ResumeLayout(false);
             this.groupBox_empprocess.PerformLayout();

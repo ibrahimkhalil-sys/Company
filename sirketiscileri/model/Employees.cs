@@ -13,6 +13,7 @@ namespace sirketiscileri.model
         public string surname { get; set; }
         public int passportNum { get; set; }
         public string position { get; set; }
+        public string salary { get; set; }
 
         public string username { get; set; }
         public String password { get; set; }
@@ -22,7 +23,7 @@ namespace sirketiscileri.model
 
         }
 
-        public Employees(string name,string surname, int passportNum,string position,string username, string password)
+        public Employees(string name,string surname, int passportNum,string position,string username, string password, string salary = "")
         {
             this.name = name;
             this.surname = surname;
@@ -30,6 +31,7 @@ namespace sirketiscileri.model
             this.position = position;
             this.username = username;
             this.password = password;
+            this.salary = salary;
             
         }
 

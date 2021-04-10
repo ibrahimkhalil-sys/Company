@@ -97,8 +97,8 @@ namespace sirketiscileri
             {
                 ContextMenu m = new ContextMenu();
                 m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].name));
-                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].passportNum.ToString()));
-                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].getUsername()));
+                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].username.ToString()));
+                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].salary));
 
                 int currentMouseOverRow = dataGridView1.HitTest(e.X, e.Y).RowIndex;
 
@@ -110,6 +110,13 @@ namespace sirketiscileri
                 m.Show(dataGridView1, new Point(e.X, e.Y));
 
             }
+        }
+
+        private void Manager_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Form1 frm = new Form1();
+            //frm.Show();
+            //this.Close();
         }
     }
     }
