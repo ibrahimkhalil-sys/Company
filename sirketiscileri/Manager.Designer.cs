@@ -252,6 +252,7 @@ namespace sirketiscileri
             this.btnLoadExcel.TabIndex = 7;
             this.btnLoadExcel.Text = "Load";
             this.btnLoadExcel.UseVisualStyleBackColor = true;
+            this.btnLoadExcel.Click += new System.EventHandler(this.btnLoadExcel_Click);
             // 
             // Manager
             // 

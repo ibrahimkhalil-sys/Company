@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -45,13 +46,13 @@ namespace sirketiscileri
 
         private void Manager_Load(object sender, EventArgs e)
         {
-            foreach (Employees employees in employees)
+            /*foreach (Employees employees in employees)
             {
                 dataGridView1.Rows.Add(employees.getname(), employees.getsurname()
                     , employees.getpassportNum(), employees.getposition()
                     , employees.getUsername(), employees.getPassword());
 
-            }
+            }*/
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -152,6 +153,24 @@ namespace sirketiscileri
             workbook.SaveAs("employees.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             // Exit from the application  
             app.Quit();
+        }
+
+        private void btnLoadExcel_Click(object sender, EventArgs e)
+        {
+            //TODO burdan
+            String name = "Items";
+            String constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
+                            "employees.xlsx" +
+                            ";Extended Properties='Excel 12.0 XML;HDR=YES;';";
+
+            OleDbConnection con = new OleDbConnection(constr);
+            OleDbCommand oconn = new OleDbCommand("Select * From [" + name + "$]", con);
+            con.Open();
+
+            OleDbDataAdapter sda = new OleDbDataAdapter(oconn);
+            DataTable data = new DataTable();
+            sda.Fill(data);
+            dataGridView1.DataSource = data;
         }
     }
     }
