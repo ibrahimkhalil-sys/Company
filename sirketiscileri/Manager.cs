@@ -47,7 +47,9 @@ namespace sirketiscileri
         {
             foreach (Employees employees in employees)
             {
-                dataGridView1.Rows.Add(employees.getname(), employees.getsurname(), employees.getpassportNum(), employees.getposition(), employees.getUsername(), employees.getPassword());
+                dataGridView1.Rows.Add(employees.getname(), employees.getsurname()
+                    , employees.getpassportNum(), employees.getposition()
+                    , employees.getUsername(), employees.getPassword());
 
             }
         }
@@ -89,7 +91,26 @@ namespace sirketiscileri
              dataGridView1.Rows.Add(txt_name.Text, txt_surname.Text, txt_passportnum.Text, txt_position.Text);
         }
 
-      
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                ContextMenu m = new ContextMenu();
+                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].name));
+                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].passportNum.ToString()));
+                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].getUsername()));
+
+                int currentMouseOverRow = dataGridView1.HitTest(e.X, e.Y).RowIndex;
+
+                if (currentMouseOverRow >= 0)
+                {
+                    m.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
+                }
+
+                m.Show(dataGridView1, new Point(e.X, e.Y));
+
+            }
         }
+    }
     }
 

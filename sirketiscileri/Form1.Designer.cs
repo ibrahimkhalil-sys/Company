@@ -72,7 +72,7 @@ namespace sirketiscileri
             this.textBox_name.Location = new System.Drawing.Point(247, 36);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(100, 19);
-            this.textBox_name.TabIndex = 3;
+            this.textBox_name.TabIndex = 1;
             // 
             // lbl_password
             // 
@@ -88,7 +88,7 @@ namespace sirketiscileri
             this.textBox_password.Location = new System.Drawing.Point(247, 61);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.Size = new System.Drawing.Size(100, 19);
-            this.textBox_password.TabIndex = 3;
+            this.textBox_password.TabIndex = 2;
             // 
             // button_enter
             // 
@@ -105,7 +105,7 @@ namespace sirketiscileri
             this.button_clear.Location = new System.Drawing.Point(292, 95);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(75, 23);
-            this.button_clear.TabIndex = 4;
+            this.button_clear.TabIndex = 5;
             this.button_clear.Text = "clear";
             this.button_clear.UseVisualStyleBackColor = true;
             this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
