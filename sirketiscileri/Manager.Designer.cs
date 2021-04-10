@@ -52,12 +52,16 @@ namespace sirketiscileri
             this.SURNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PASSPORTNUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.POSITION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveExcel = new System.Windows.Forms.Button();
+            this.btnLoadExcel = new System.Windows.Forms.Button();
             this.groupBox_empprocess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_empprocess
             // 
+            this.groupBox_empprocess.Controls.Add(this.btnLoadExcel);
+            this.groupBox_empprocess.Controls.Add(this.btnSaveExcel);
             this.groupBox_empprocess.Controls.Add(this.btn_add);
             this.groupBox_empprocess.Controls.Add(this.btn_delete);
             this.groupBox_empprocess.Controls.Add(this.btn_uptate);
@@ -230,6 +234,25 @@ namespace sirketiscileri
             this.POSITION.HeaderText = "POSITION";
             this.POSITION.Name = "POSITION";
             // 
+            // btnSaveExcel
+            // 
+            this.btnSaveExcel.Location = new System.Drawing.Point(17, 288);
+            this.btnSaveExcel.Name = "btnSaveExcel";
+            this.btnSaveExcel.Size = new System.Drawing.Size(179, 23);
+            this.btnSaveExcel.TabIndex = 7;
+            this.btnSaveExcel.Text = "Save";
+            this.btnSaveExcel.UseVisualStyleBackColor = true;
+            this.btnSaveExcel.Click += new System.EventHandler(this.btnSaveExcel_Click);
+            // 
+            // btnLoadExcel
+            // 
+            this.btnLoadExcel.Location = new System.Drawing.Point(17, 317);
+            this.btnLoadExcel.Name = "btnLoadExcel";
+            this.btnLoadExcel.Size = new System.Drawing.Size(179, 23);
+            this.btnLoadExcel.TabIndex = 7;
+            this.btnLoadExcel.Text = "Load";
+            this.btnLoadExcel.UseVisualStyleBackColor = true;
+            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -284,5 +307,7 @@ namespace sirketiscileri
         private System.Windows.Forms.Button btn_uptate;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btnLoadExcel;
+        private System.Windows.Forms.Button btnSaveExcel;
     }
 }
