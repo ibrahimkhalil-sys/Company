@@ -16,7 +16,6 @@ namespace sirketiscileri
     {
         List<Employees> employee = new List<Employees>();
 
-
         public Form1()
         {
             InitializeComponent();
@@ -65,9 +64,9 @@ namespace sirketiscileri
 
             //foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                if (username.ToLower() == dataGridView1[5, j].Value?.ToString()
-                    && password.ToLower() == dataGridView1[6, j].Value?.ToString()
-                    && dataGridView1[4, j].Value?.ToString() == "manager")
+                if (username.ToLower() == dataGridView1[6, j].Value?.ToString()
+                    && password.ToLower() == dataGridView1[7, j].Value?.ToString()
+                    && dataGridView1[5, j].Value?.ToString() == "manager")
                 {
                     Manager manager = new Manager(employee);
                     manager.Show();
@@ -75,9 +74,9 @@ namespace sirketiscileri
                     control = true;
                     break;
                 }
-                else if (username.ToLower() == dataGridView1[5, j].Value?.ToString()
-                    && password.ToLower() == dataGridView1[6, j].Value?.ToString()
-                    && dataGridView1[4, j].Value?.ToString() == "staff")
+                else if (username.ToLower() == dataGridView1[6, j].Value?.ToString()
+                    && password.ToLower() == dataGridView1[7, j].Value?.ToString()
+                    && dataGridView1[5, j].Value?.ToString() == "staff")
                 {
                     Staff staff = new Staff();
                     staff.Show();

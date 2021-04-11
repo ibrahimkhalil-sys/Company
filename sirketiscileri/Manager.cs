@@ -31,20 +31,6 @@ namespace sirketiscileri
 
         }
 
-        private void txt_name_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_empprocess_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void Manager_Load(object sender, EventArgs e)
         {
@@ -61,7 +47,7 @@ namespace sirketiscileri
                 var range = ws.RangeUsed();
                 dataGridView1.Rows.Add(range.RowCount() - 2);
 
-                for (int i = 2; i < range.RowCount(); i++)
+                for (int i = 2; i < range.RowCount() + 1; i++)
                 {
                     for (int j = 1; j < range.ColumnCount() + 1; j++)
                     {
@@ -113,15 +99,37 @@ namespace sirketiscileri
             if (e.Button == MouseButtons.Right)
             {
                 ContextMenu m = new ContextMenu();
-                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].name));
-                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].username.ToString()));
-                m.MenuItems.Add(new MenuItem(employees[dataGridView1.SelectedRows[0].Index].salary));
 
-                int currentMouseOverRow = dataGridView1.HitTest(e.X, e.Y).RowIndex;
-
-                if (currentMouseOverRow >= 0)
+                DataGridView dataGridView2 = new DataGridView();
+                using (XLWorkbook wb = new XLWorkbook("../../employees_info.xlsx"))
                 {
-                    m.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
+                    var ws = wb.Worksheets.First();
+                    var range = ws.RangeUsed();
+
+                    for (int i = 1; i < range.ColumnCount() + 1; i++)
+                    {
+                        dataGridView2.Columns.Add(ws.Cell(1, i).Value.ToString(), ws.Cell(1, i).Value.ToString());
+                    }
+
+                    dataGridView2.Rows.Add(range.RowCount() + 1);
+
+                    for (int i = 1; i < range.RowCount() + 1; i++)
+                    {
+                        for (int j = 1; j < range.ColumnCount()+1; j++)
+                        {
+                            dataGridView2[j, i].Value = ws.Cell(i, j).Value;
+                        }
+                    }
+                }
+                for (int i = 1; i < dataGridView1.Columns.Count; i++)
+                {
+                    m.MenuItems.Add( new MenuItem(dataGridView1.Columns[i].HeaderText + " | " + dataGridView1.SelectedRows[0].Cells[i].Value.ToString()));
+                }
+
+                for (int i = 1; i < dataGridView2.Columns.Count; i++)
+                {
+                    m.MenuItems.Add(new MenuItem(dataGridView2.Columns[i].HeaderText + " | " + dataGridView2[i , dataGridView1.SelectedRows[0].Index].Value?.ToString()));
+                    //TODO buralarda asibka
                 }
 
                 m.Show(dataGridView1, new Point(e.X, e.Y));
@@ -144,13 +152,13 @@ namespace sirketiscileri
 
             var worksheet = wb.Worksheets.Add("employees");
             //var range = worksheet.Cell(2, 1).InsertData(dt.AsEnumerable());
-            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
-                    {
-                        worksheet.Cell(1, j+1).Value = dataGridView1.Columns[j].HeaderCell.Value?.ToString();
-                        worksheet.Cell(i+2, j+1).Value = dataGridView1[j, i].Value?.ToString();
-                    }
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    worksheet.Cell(1, j + 1).Value = dataGridView1.Columns[j].HeaderCell.Value?.ToString();
+                    worksheet.Cell(i + 2, j + 1).Value = dataGridView1[j, i].Value?.ToString();
+                }
             }
             worksheet.Column(2).Width = 8.0;
 
@@ -170,12 +178,6 @@ namespace sirketiscileri
                     return stream;
                 }
             }
-           
-        }
-
-        private void btnLoadExcel_Click(object sender, EventArgs e)
-        {
-            
 
         }
     }

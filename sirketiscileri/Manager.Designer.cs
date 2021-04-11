@@ -33,7 +33,6 @@ namespace sirketiscileri
         private void InitializeComponent()
         {
             this.groupBox_empprocess = new System.Windows.Forms.GroupBox();
-            this.btnLoadExcel = new System.Windows.Forms.Button();
             this.btnSaveExcel = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -57,13 +56,13 @@ namespace sirketiscileri
             this.USERNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PASSWORD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SALARY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox_empprocess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_empprocess
             // 
-            this.groupBox_empprocess.Controls.Add(this.btnLoadExcel);
             this.groupBox_empprocess.Controls.Add(this.btnSaveExcel);
             this.groupBox_empprocess.Controls.Add(this.btn_add);
             this.groupBox_empprocess.Controls.Add(this.btn_delete);
@@ -82,21 +81,10 @@ namespace sirketiscileri
             this.groupBox_empprocess.Size = new System.Drawing.Size(242, 426);
             this.groupBox_empprocess.TabIndex = 0;
             this.groupBox_empprocess.TabStop = false;
-            this.groupBox_empprocess.Enter += new System.EventHandler(this.groupBox_empprocess_Enter);
-            // 
-            // btnLoadExcel
-            // 
-            this.btnLoadExcel.Location = new System.Drawing.Point(17, 317);
-            this.btnLoadExcel.Name = "btnLoadExcel";
-            this.btnLoadExcel.Size = new System.Drawing.Size(179, 23);
-            this.btnLoadExcel.TabIndex = 7;
-            this.btnLoadExcel.Text = "Load";
-            this.btnLoadExcel.UseVisualStyleBackColor = true;
-            this.btnLoadExcel.Click += new System.EventHandler(this.btnLoadExcel_Click);
             // 
             // btnSaveExcel
             // 
-            this.btnSaveExcel.Location = new System.Drawing.Point(17, 288);
+            this.btnSaveExcel.Location = new System.Drawing.Point(17, 401);
             this.btnSaveExcel.Name = "btnSaveExcel";
             this.btnSaveExcel.Size = new System.Drawing.Size(179, 23);
             this.btnSaveExcel.TabIndex = 7;
@@ -106,7 +94,7 @@ namespace sirketiscileri
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(17, 149);
+            this.btn_add.Location = new System.Drawing.Point(17, 265);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(179, 23);
             this.btn_add.TabIndex = 6;
@@ -116,7 +104,7 @@ namespace sirketiscileri
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(17, 178);
+            this.btn_delete.Location = new System.Drawing.Point(17, 299);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(179, 23);
             this.btn_delete.TabIndex = 5;
@@ -126,7 +114,7 @@ namespace sirketiscileri
             // 
             // btn_uptate
             // 
-            this.btn_uptate.Location = new System.Drawing.Point(17, 207);
+            this.btn_uptate.Location = new System.Drawing.Point(17, 333);
             this.btn_uptate.Name = "btn_uptate";
             this.btn_uptate.Size = new System.Drawing.Size(179, 23);
             this.btn_uptate.TabIndex = 4;
@@ -136,7 +124,7 @@ namespace sirketiscileri
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(17, 245);
+            this.btn_clear.Location = new System.Drawing.Point(17, 367);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(179, 23);
             this.btn_clear.TabIndex = 3;
@@ -198,7 +186,6 @@ namespace sirketiscileri
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(100, 19);
             this.txt_name.TabIndex = 1;
-            this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             // 
             // lbl_name
             // 
@@ -223,13 +210,15 @@ namespace sirketiscileri
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.NAME,
             this.SURNAME,
             this.PASSPORTNUM,
             this.POSITION,
             this.USERNAME,
             this.PASSWORD,
-            this.SALARY});
+            this.SALARY
+            });
             this.dataGridView1.Location = new System.Drawing.Point(260, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
@@ -238,6 +227,11 @@ namespace sirketiscileri
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
             // 
             // NAME
             // 
@@ -273,6 +267,7 @@ namespace sirketiscileri
             // 
             this.SALARY.HeaderText = "SALARY";
             this.SALARY.Name = "SALARY";
+
             // 
             // Manager
             // 
@@ -328,10 +323,10 @@ namespace sirketiscileri
         private System.Windows.Forms.Button btn_uptate;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Button btnLoadExcel;
         private System.Windows.Forms.Button btnSaveExcel;
         private System.Windows.Forms.DataGridViewTextBoxColumn USERNAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn PASSWORD;
         private System.Windows.Forms.DataGridViewTextBoxColumn SALARY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }
