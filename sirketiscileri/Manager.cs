@@ -31,20 +31,6 @@ namespace sirketiscileri
 
         }
 
-        private void txt_name_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_empprocess_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void Manager_Load(object sender, EventArgs e)
         {
@@ -61,7 +47,7 @@ namespace sirketiscileri
                 var range = ws.RangeUsed();
                 dataGridView1.Rows.Add(range.RowCount() - 2);
 
-                for (int i = 2; i < range.RowCount(); i++)
+                for (int i = 2; i < range.RowCount() + 1; i++)
                 {
                     for (int j = 1; j < range.ColumnCount() + 1; j++)
                     {
@@ -144,7 +130,7 @@ namespace sirketiscileri
 
             var worksheet = wb.Worksheets.Add("employees");
             //var range = worksheet.Cell(2, 1).InsertData(dt.AsEnumerable());
-            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                     for (int j = 0; j < dataGridView1.Columns.Count; j++)
                     {
@@ -171,12 +157,6 @@ namespace sirketiscileri
                 }
             }
            
-        }
-
-        private void btnLoadExcel_Click(object sender, EventArgs e)
-        {
-            
-
         }
     }
 }

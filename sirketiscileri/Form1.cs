@@ -16,7 +16,6 @@ namespace sirketiscileri
     {
         List<Employees> employee = new List<Employees>();
 
-
         public Form1()
         {
             InitializeComponent();
