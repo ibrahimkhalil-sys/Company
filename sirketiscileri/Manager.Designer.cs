@@ -33,6 +33,8 @@ namespace sirketiscileri
         private void InitializeComponent()
         {
             this.groupBox_empprocess = new System.Windows.Forms.GroupBox();
+            this.btnLoadExcel = new System.Windows.Forms.Button();
+            this.btnSaveExcel = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_uptate = new System.Windows.Forms.Button();
@@ -52,8 +54,9 @@ namespace sirketiscileri
             this.SURNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PASSPORTNUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.POSITION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveExcel = new System.Windows.Forms.Button();
-            this.btnLoadExcel = new System.Windows.Forms.Button();
+            this.USERNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PASSWORD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SALARY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox_empprocess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -79,8 +82,27 @@ namespace sirketiscileri
             this.groupBox_empprocess.Size = new System.Drawing.Size(242, 426);
             this.groupBox_empprocess.TabIndex = 0;
             this.groupBox_empprocess.TabStop = false;
-            this.groupBox_empprocess.Text = "D";
             this.groupBox_empprocess.Enter += new System.EventHandler(this.groupBox_empprocess_Enter);
+            // 
+            // btnLoadExcel
+            // 
+            this.btnLoadExcel.Location = new System.Drawing.Point(17, 317);
+            this.btnLoadExcel.Name = "btnLoadExcel";
+            this.btnLoadExcel.Size = new System.Drawing.Size(179, 23);
+            this.btnLoadExcel.TabIndex = 7;
+            this.btnLoadExcel.Text = "Load";
+            this.btnLoadExcel.UseVisualStyleBackColor = true;
+            this.btnLoadExcel.Click += new System.EventHandler(this.btnLoadExcel_Click);
+            // 
+            // btnSaveExcel
+            // 
+            this.btnSaveExcel.Location = new System.Drawing.Point(17, 288);
+            this.btnSaveExcel.Name = "btnSaveExcel";
+            this.btnSaveExcel.Size = new System.Drawing.Size(179, 23);
+            this.btnSaveExcel.TabIndex = 7;
+            this.btnSaveExcel.Text = "Save";
+            this.btnSaveExcel.UseVisualStyleBackColor = true;
+            this.btnSaveExcel.Click += new System.EventHandler(this.btnSaveExcel_Click);
             // 
             // btn_add
             // 
@@ -204,12 +226,15 @@ namespace sirketiscileri
             this.NAME,
             this.SURNAME,
             this.PASSPORTNUM,
-            this.POSITION});
+            this.POSITION,
+            this.USERNAME,
+            this.PASSWORD,
+            this.SALARY});
             this.dataGridView1.Location = new System.Drawing.Point(260, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(531, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(583, 397);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
@@ -234,25 +259,20 @@ namespace sirketiscileri
             this.POSITION.HeaderText = "POSITION";
             this.POSITION.Name = "POSITION";
             // 
-            // btnSaveExcel
+            // USERNAME
             // 
-            this.btnSaveExcel.Location = new System.Drawing.Point(17, 288);
-            this.btnSaveExcel.Name = "btnSaveExcel";
-            this.btnSaveExcel.Size = new System.Drawing.Size(179, 23);
-            this.btnSaveExcel.TabIndex = 7;
-            this.btnSaveExcel.Text = "Save";
-            this.btnSaveExcel.UseVisualStyleBackColor = true;
-            this.btnSaveExcel.Click += new System.EventHandler(this.btnSaveExcel_Click);
+            this.USERNAME.HeaderText = "USERNAME";
+            this.USERNAME.Name = "USERNAME";
             // 
-            // btnLoadExcel
+            // PASSWORD
             // 
-            this.btnLoadExcel.Location = new System.Drawing.Point(17, 317);
-            this.btnLoadExcel.Name = "btnLoadExcel";
-            this.btnLoadExcel.Size = new System.Drawing.Size(179, 23);
-            this.btnLoadExcel.TabIndex = 7;
-            this.btnLoadExcel.Text = "Load";
-            this.btnLoadExcel.UseVisualStyleBackColor = true;
-            this.btnLoadExcel.Click += new System.EventHandler(this.btnLoadExcel_Click);
+            this.PASSWORD.HeaderText = "PASSWORD";
+            this.PASSWORD.Name = "PASSWORD";
+            // 
+            // SALARY
+            // 
+            this.SALARY.HeaderText = "SALARY";
+            this.SALARY.Name = "SALARY";
             // 
             // Manager
             // 
@@ -310,5 +330,8 @@ namespace sirketiscileri
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btnLoadExcel;
         private System.Windows.Forms.Button btnSaveExcel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn USERNAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PASSWORD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SALARY;
     }
 }
