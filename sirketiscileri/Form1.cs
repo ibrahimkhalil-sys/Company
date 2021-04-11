@@ -66,13 +66,13 @@ namespace sirketiscileri
         {
             employee.Add(new Employees("musa", "zutov", 456788, "manager","musa","1", "1000000"));
             employee.Add(new Employees("ibrahim", "osmanov", 1234567, "manager","ibo", "2"));
-            /*employee.Add(new Employees("kamil", "hacilov", 675438, "staff","kamil", "3"));
-            employee.Add(new Employees("huseyn", "semedli", 567893, "staff", "huseyn","4"));
-            employee.Add(new Employees("abdul", "memmedli", 987654, "staff", "abdul","5"));
-            employee.Add(new Employees("maykl", "oven", 456738, "staff", "maykl","6"));
-            employee.Add(new Employees("suzuki", "yamanishi", 3546789, "staff","suzuki", "7"));
-            employee.Add(new Employees("samir", "qafarov", 345786, "staff", "samir","8"));
-            employee.Add(new Employees("azer", "zeynalov", 345787, "staff","azer", "9"));*/
+            employee.Add(new Employees("kamil", "hacilov", 675438, "staff", "kamil", "3"));
+            employee.Add(new Employees("huseyn", "semedli", 567893, "staff", "huseyn", "4"));
+            employee.Add(new Employees("abdul", "memmedli", 987654, "staff", "abdul", "5"));
+            employee.Add(new Employees("maykl", "oven", 456738, "staff", "maykl", "6"));
+            employee.Add(new Employees("suzuki", "yamanishi", 3546789, "staff", "suzuki", "7"));
+            employee.Add(new Employees("samir", "qafarov", 345786, "staff", "samir", "8"));
+            employee.Add(new Employees("azer", "zeynalov", 345787, "staff", "azer", "9"));
 
 
 
