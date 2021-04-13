@@ -78,7 +78,7 @@ namespace sirketiscileri
                     && password.ToLower() == dataGridView1[7, j].Value?.ToString()
                     && dataGridView1[5, j].Value?.ToString() == "staff")
                 {
-                    Staff staff = new Staff();
+                    Staff staff = new Staff(username);
                     staff.Show();
                     this.Hide();
                     control = true;

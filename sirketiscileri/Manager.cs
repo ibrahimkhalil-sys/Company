@@ -34,13 +34,6 @@ namespace sirketiscileri
 
         private void Manager_Load(object sender, EventArgs e)
         {
-            /*foreach (Employees employees in employees)
-            {
-                dataGridView1.Rows.Add(employees.getname(), employees.getsurname()
-                    , employees.getpassportNum(), employees.getposition()
-                    , employees.getUsername(), employees.getPassword());
-            }*/
-
             using (XLWorkbook wb = new XLWorkbook("../../employees.xlsx"))
             {
                 var ws = wb.Worksheets.First();
