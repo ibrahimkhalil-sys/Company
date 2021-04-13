@@ -34,8 +34,15 @@ namespace sirketiscileri
                     {
                         txtName_name.Text = ws.Cell(i, 2).Value.ToString();
                         textBox1_surname.Text = ws.Cell(i, 3).Value.ToString();
+                        textBox2_passport.Text = ws.Cell(i, 4).Value.ToString();
+                        textBox3_position.Text = ws.Cell(i, 5).Value.ToString();
+                        textBox4_username.Text = ws.Cell(i, 6).Value.ToString();
+                        textBox5_password.Text = ws.Cell(i, 7).Value.ToString();
+                        textBox_salary.Text = ws.Cell(i, 8).Value.ToString();
+
+                        break;
+
                     }
-                    //break;
                 }
             }
         }
