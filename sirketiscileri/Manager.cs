@@ -100,40 +100,23 @@ namespace sirketiscileri
             {
                 ContextMenu m = new ContextMenu();
 
-                DataGridView dataGridView2 = new DataGridView();
+                for (int i = 1; i < dataGridView1.Columns.Count; i++)
+                {
+                    m.MenuItems.Add(new MenuItem(dataGridView1.Columns[i].HeaderText + " | " + dataGridView1.SelectedRows[0].Cells[i].Value.ToString()));
+                }
+
                 using (XLWorkbook wb = new XLWorkbook("../../employees_info.xlsx"))
                 {
                     var ws = wb.Worksheets.First();
                     var range = ws.RangeUsed();
 
-                    for (int i = 1; i < range.ColumnCount() + 1; i++)
+                    for (int i = 1; i <= range.ColumnCount(); i++)
                     {
-                        dataGridView2.Columns.Add(ws.Cell(1, i).Value.ToString(), ws.Cell(1, i).Value.ToString());
-                    }
+                        m.MenuItems.Add(new MenuItem(ws.Cell(1, i).Value.ToString() + " | " + ws.Cell((dataGridView1.SelectedRows[0].Index + 2), i).Value.ToString()));
 
-                    dataGridView2.Rows.Add(range.RowCount() + 1);
-
-                    for (int i = 1; i < range.RowCount() + 1; i++)
-                    {
-                        for (int j = 1; j < range.ColumnCount()+1; j++)
-                        {
-                            dataGridView2[j, i].Value = ws.Cell(i, j).Value;
-                        }
                     }
                 }
-                for (int i = 1; i < dataGridView1.Columns.Count; i++)
-                {
-                    m.MenuItems.Add( new MenuItem(dataGridView1.Columns[i].HeaderText + " | " + dataGridView1.SelectedRows[0].Cells[i].Value.ToString()));
-                }
-
-                for (int i = 1; i < dataGridView2.Columns.Count; i++)
-                {
-                    m.MenuItems.Add(new MenuItem(dataGridView2.Columns[i].HeaderText + " | " + dataGridView2[i , dataGridView1.SelectedRows[0].Index].Value?.ToString()));
-                    //TODO buralarda asibka
-                }
-
                 m.Show(dataGridView1, new Point(e.X, e.Y));
-
             }
         }
 

@@ -59,7 +59,7 @@ namespace sirketiscileri
             // 
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblSurname.Location = new System.Drawing.Point(82, 89);
+            this.lblSurname.Location = new System.Drawing.Point(89, 89);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(68, 16);
             this.lblSurname.TabIndex = 0;
@@ -69,7 +69,7 @@ namespace sirketiscileri
             // 
             this.lblPassportNum.AutoSize = true;
             this.lblPassportNum.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblPassportNum.Location = new System.Drawing.Point(82, 115);
+            this.lblPassportNum.Location = new System.Drawing.Point(89, 115);
             this.lblPassportNum.Name = "lblPassportNum";
             this.lblPassportNum.Size = new System.Drawing.Size(98, 16);
             this.lblPassportNum.TabIndex = 0;
@@ -79,7 +79,7 @@ namespace sirketiscileri
             // 
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblPosition.Location = new System.Drawing.Point(82, 141);
+            this.lblPosition.Location = new System.Drawing.Point(89, 141);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(61, 16);
             this.lblPosition.TabIndex = 0;
@@ -89,7 +89,7 @@ namespace sirketiscileri
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblUsername.Location = new System.Drawing.Point(82, 167);
+            this.lblUsername.Location = new System.Drawing.Point(89, 167);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(75, 16);
             this.lblUsername.TabIndex = 0;
@@ -99,7 +99,7 @@ namespace sirketiscileri
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblPassword.Location = new System.Drawing.Point(82, 193);
+            this.lblPassword.Location = new System.Drawing.Point(89, 193);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(72, 16);
             this.lblPassword.TabIndex = 0;

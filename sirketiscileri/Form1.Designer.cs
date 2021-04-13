@@ -31,7 +31,6 @@ namespace sirketiscileri
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbl_user = new System.Windows.Forms.Label();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.lbl_password = new System.Windows.Forms.Label();
@@ -50,13 +49,6 @@ namespace sirketiscileri
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(136, 61);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(9, 19);
-            this.dateTimePicker1.TabIndex = 1;
             // 
             // lbl_user
             // 
@@ -121,7 +113,6 @@ namespace sirketiscileri
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.lbl_user);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -135,7 +126,6 @@ namespace sirketiscileri
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbl_user;
         private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.Label lbl_password;
