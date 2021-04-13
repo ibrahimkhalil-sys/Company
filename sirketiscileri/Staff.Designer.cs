@@ -30,19 +30,19 @@ namespace sirketiscileri
         private void InitializeComponent()
         {
             this.lblName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.lblPassportNum = new System.Windows.Forms.Label();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.txtName_name = new System.Windows.Forms.TextBox();
+            this.textBox1_surname = new System.Windows.Forms.TextBox();
+            this.textBox2_passport = new System.Windows.Forms.TextBox();
+            this.textBox3_position = new System.Windows.Forms.TextBox();
+            this.textBox4_username = new System.Windows.Forms.TextBox();
+            this.textBox5_password = new System.Windows.Forms.TextBox();
+            this.textBox_salary = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblName
@@ -55,140 +55,140 @@ namespace sirketiscileri
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
-            // label1
+            // lblSurname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(89, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblSurname.Location = new System.Drawing.Point(82, 89);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(68, 16);
+            this.lblSurname.TabIndex = 0;
+            this.lblSurname.Text = "Surname";
             // 
-            // label2
+            // lblPassportNum
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(89, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Name";
+            this.lblPassportNum.AutoSize = true;
+            this.lblPassportNum.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblPassportNum.Location = new System.Drawing.Point(82, 115);
+            this.lblPassportNum.Name = "lblPassportNum";
+            this.lblPassportNum.Size = new System.Drawing.Size(98, 16);
+            this.lblPassportNum.TabIndex = 0;
+            this.lblPassportNum.Text = "PassportNum";
             // 
-            // label3
+            // lblPosition
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(89, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Name";
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblPosition.Location = new System.Drawing.Point(82, 141);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(61, 16);
+            this.lblPosition.TabIndex = 0;
+            this.lblPosition.Text = "Position";
             // 
-            // label4
+            // lblUsername
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(89, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Name";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblUsername.Location = new System.Drawing.Point(82, 167);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(75, 16);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "Username";
             // 
-            // label5
+            // lblPassword
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(89, 195);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Name";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblPassword.Location = new System.Drawing.Point(82, 193);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(72, 16);
+            this.lblPassword.TabIndex = 0;
+            this.lblPassword.Text = "Password";
             // 
-            // label6
+            // lblSalary
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(89, 221);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 16);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Name";
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblSalary.Location = new System.Drawing.Point(89, 221);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(51, 16);
+            this.lblSalary.TabIndex = 0;
+            this.lblSalary.Text = "Salary";
             // 
-            // txtName
+            // txtName_name
             // 
-            this.txtName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtName.Location = new System.Drawing.Point(152, 62);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 23);
-            this.txtName.TabIndex = 1;
+            this.txtName_name.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtName_name.Location = new System.Drawing.Point(182, 63);
+            this.txtName_name.Name = "txtName_name";
+            this.txtName_name.Size = new System.Drawing.Size(100, 23);
+            this.txtName_name.TabIndex = 1;
             // 
-            // textBox1
+            // textBox1_surname
             // 
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(152, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 1;
+            this.textBox1_surname.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox1_surname.Location = new System.Drawing.Point(182, 89);
+            this.textBox1_surname.Name = "textBox1_surname";
+            this.textBox1_surname.Size = new System.Drawing.Size(100, 23);
+            this.textBox1_surname.TabIndex = 1;
             // 
-            // textBox2
+            // textBox2_passport
             // 
-            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox2.Location = new System.Drawing.Point(152, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 1;
+            this.textBox2_passport.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox2_passport.Location = new System.Drawing.Point(182, 115);
+            this.textBox2_passport.Name = "textBox2_passport";
+            this.textBox2_passport.Size = new System.Drawing.Size(100, 23);
+            this.textBox2_passport.TabIndex = 1;
             // 
-            // textBox3
+            // textBox3_position
             // 
-            this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox3.Location = new System.Drawing.Point(152, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 1;
+            this.textBox3_position.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox3_position.Location = new System.Drawing.Point(182, 141);
+            this.textBox3_position.Name = "textBox3_position";
+            this.textBox3_position.Size = new System.Drawing.Size(100, 23);
+            this.textBox3_position.TabIndex = 1;
             // 
-            // textBox4
+            // textBox4_username
             // 
-            this.textBox4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox4.Location = new System.Drawing.Point(152, 166);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 1;
+            this.textBox4_username.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox4_username.Location = new System.Drawing.Point(182, 167);
+            this.textBox4_username.Name = "textBox4_username";
+            this.textBox4_username.Size = new System.Drawing.Size(100, 23);
+            this.textBox4_username.TabIndex = 1;
             // 
-            // textBox5
+            // textBox5_password
             // 
-            this.textBox5.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox5.Location = new System.Drawing.Point(152, 192);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 1;
+            this.textBox5_password.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox5_password.Location = new System.Drawing.Point(182, 193);
+            this.textBox5_password.Name = "textBox5_password";
+            this.textBox5_password.Size = new System.Drawing.Size(100, 23);
+            this.textBox5_password.TabIndex = 1;
             // 
-            // textBox6
+            // textBox_salary
             // 
-            this.textBox6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox6.Location = new System.Drawing.Point(152, 218);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 23);
-            this.textBox6.TabIndex = 1;
+            this.textBox_salary.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox_salary.Location = new System.Drawing.Point(182, 219);
+            this.textBox_salary.Name = "textBox_salary";
+            this.textBox_salary.Size = new System.Drawing.Size(100, 23);
+            this.textBox_salary.TabIndex = 1;
             // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox_salary);
+            this.Controls.Add(this.textBox5_password);
+            this.Controls.Add(this.textBox4_username);
+            this.Controls.Add(this.textBox3_position);
+            this.Controls.Add(this.textBox2_passport);
+            this.Controls.Add(this.textBox1_surname);
+            this.Controls.Add(this.txtName_name);
+            this.Controls.Add(this.lblSalary);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.lblPosition);
+            this.Controls.Add(this.lblPassportNum);
+            this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblName);
             this.Name = "Staff";
             this.Text = "Staff";
@@ -200,18 +200,18 @@ namespace sirketiscileri
         #endregion
 
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Label lblPassportNum;
+        private System.Windows.Forms.Label lblPosition;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblSalary;
+        private System.Windows.Forms.TextBox txtName_name;
+        private System.Windows.Forms.TextBox textBox1_surname;
+        private System.Windows.Forms.TextBox textBox2_passport;
+        private System.Windows.Forms.TextBox textBox3_position;
+        private System.Windows.Forms.TextBox textBox4_username;
+        private System.Windows.Forms.TextBox textBox5_password;
+        private System.Windows.Forms.TextBox textBox_salary;
     }
 }
